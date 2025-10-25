@@ -57,9 +57,9 @@ html, body {
 
 .btn-deltarune {
     display: inline-block;
-    padding: 14px 28px;
+    padding: 8px 10px;
     margin-bottom: 18px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: 'deltarune', sans-serif;
     background-color: black;
     color: white;

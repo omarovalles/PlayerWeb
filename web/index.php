@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../design/styleindex.css">
     <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
     <script src="../js/index.js" defer></script>
-    
     <title>SoreWeb</title>
 
 </head>
@@ -18,7 +17,7 @@
         <h1>Bienvenid@s a SoreWeb</h1>
         <p>Una pagina especial para mostrar mis jueguitos al mundo, saber un poco de mi y pasarnosla bien :3!</p>
 
-      <div id="reproducirSonido" class="button"><p>Visitar pagina</p></div>
+    <div id="reproducirSonido" class="button"><p>Visitar pagina</p></div>
         <audio id="sonidoBoton" src="../resources/videoplayback.mp3"></audio>
     </div>
 

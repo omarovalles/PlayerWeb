@@ -1,6 +1,6 @@
 <?php
 
-include ('../library/conexion.php');
+include ('../../library/conexion.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = $_POST['nombre'];
@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usuarios = conexion::consulta($sql, ['nombre' => $nombre, 'correo' => $correo]);
 
     if (count($usuarios) > 0) {
-        echo "El usuario o correo ya está registrado.";
+        echo "El usuario o correo ya está registrado."; 
         exit;
     }
 
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result > 0) {
         echo "Usuario registrado exitosamente.";
-        header("Location: ../web/login.php");
+        header("Location: ../../web/users/login.php");
         exit;
     } else {
         echo "Error al registrar el usuario.";

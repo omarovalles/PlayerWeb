@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'deltarune'; 
-    src: url('../fonts/undertale-deltarune-text-font-extended.otf') format('truetype');
+    src: url('../../fonts/undertale-deltarune-text-font-extended.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -14,7 +14,7 @@
 body {
     font-family: 'deltarune', sans-serif;
     background-color: black;
-    background-image: url('../resources/malditagatasore.png');
+    background-image: url('../../resources/malditagatasore.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

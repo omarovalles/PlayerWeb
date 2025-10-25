@@ -1,6 +1,6 @@
 <?php
 
-include ('../library/conexion.php');
+include ('../../library/conexion.php');
 
 // Validar si el usuario coincide con los datos de la base de datos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         session_start();
         $_SESSION['usuario_id'] = $usuario->id;
         $_SESSION['usuario_nombre'] = $usuario->nombre;
-        header("Location: ../web/website.php");
+        header("Location: ../../web/website.php");
         exit;
     } else {
         echo "Contraseña incorrecta.";

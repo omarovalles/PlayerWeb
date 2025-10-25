@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Registro - Soreweb</title>
-    <link rel="stylesheet" href="../design/styleregister.css">
+    <link rel="stylesheet" href="../../design/users/styleregister.css">
 </head>
 <body>
     <div class="register-container">
         <h1>Crear Cuenta</h1>
-        <form action="../controllers/registrar_usuario.php" method="post">
+        <form action="../../controllers/admin/registrar_usuario.php" method="post">
             <label for="nombre">Usuario:</label>
             <input type="text" id="nombre" name="nombre" required>
 

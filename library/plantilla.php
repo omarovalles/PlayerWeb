@@ -12,16 +12,16 @@ class Plantilla {
     }
 
     public function __construct() {
-        // 🔹 Iniciar sesión
+        //  Iniciar sesión
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
 
-        // 🔹 Obtener ID de usuario
+        //  Obtener ID de usuario
         $usuarioId = $_SESSION['usuario_id'] ?? null;
         $rol = null;
 
-        // 🔹 Si hay usuario, obtener rol desde BD
+        //  Si hay usuario, obtener rol desde BD
         if ($usuarioId) {
             $resultado = conexion::consulta(
                 "SELECT rol FROM usuarios WHERE id = :id",
@@ -35,18 +35,18 @@ class Plantilla {
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
-            <link rel="stylesheet" href="../design/stylewebsite.css">
+            <link rel="icon" href="soreweb/resources/favicon.ico" type="image/x-icon">
+            <link rel="stylesheet" href="../../design/stylewebsite.css">
             <title>SoreWeb</title>
         </head>
         <body>
             <nav class="navigation">
                 <ul>
-                    <li><a href="../web/website.php">Inicio</a></li>
-                    <li><a href="../web/games.php">Juegos</a></li>
-                    <li><a href="../web/animes.php">Animes</a></li>
-                    <li><a href="../web/about.php">Sobre mí</a></li>
-                    <li><a href="../web/contactame.php">Contacto</a></li>
+                    <li><a href="../website.php">Inicio</a></li>
+                    <li><a href="../web/games/games.php">Juegos</a></li>
+                    <li><a href="../web/anime/animes.php">Animes</a></li>
+                    <li><a href="../web/contacts/about.php">Sobre mí</a></li>
+                    <li><a href="../web/contacts/contactame.php">Contacto</a></li>
 
                     <?php if ($usuarioId): ?>
                         <!-- Perfil dinámico -->

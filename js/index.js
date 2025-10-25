@@ -19,13 +19,13 @@ document.getElementById('reproducirSonido').addEventListener('click', () => {
     sonidoBoton.currentTime = 0;
     sonidoBoton.play();
     setTimeout(() => {
-        window.location.href = '../web/login.php';
+        window.location.href = '../web/users/login.php';
     }, 2000);
 });
 
 // Opciones del menú con URLs
 const options = [
-    { label: "Pagina WEB", url: "../web/website.php" },
+    { label: "Pagina WEB", url: "../web/users/login.php" },
     { label: "Twitch", url: "https://twitch.tv/sorenine_" },
     { label: "Discord", url: "https://discord.gg/https://discord.gg/FpEQD44kyC" },
     { label: "Volver", url: null }

@@ -1,17 +1,9 @@
 <?php
-require_once '../library/motor.php';
+require_once '../../library/motor.php';
 Plantilla::aplicar(); 
 
-session_start();
-
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: ../web/login.php"); 
-    exit;
-}
-
-$usuarioid = $_SESSION['usuario_id'];
-
 // Verificar rol
+$usuarioid = $_SESSION['usuario_id'];
 $sql = "SELECT rol FROM usuarios WHERE id = :usuarioid";
 $resultado = conexion::consulta($sql, [':usuarioid' => $usuarioid]);
 $rol = $resultado[0]->rol ?? 'U';  
@@ -36,7 +28,7 @@ if ($busqueda !== '') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../resources/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../design/stylegames.css">
+    <link rel="stylesheet" href="../../design/games/stylegames.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>SoreWeb</title>
 </head>
@@ -48,7 +40,7 @@ if ($busqueda !== '') {
     </div>
     
     <!-- 🔎 Buscador -->
-    <form method="get" class="text-center" style="margin:20px 0;">
+    <form method="get" class="text-center" style="margin-left:50px 0;">
         <input type="text" name="q" value="<?= htmlspecialchars($busqueda) ?>" 
                placeholder="Buscar juego..." 
                style="padding:8px;width:50%;border-radius:8px;">
@@ -66,7 +58,7 @@ if ($busqueda !== '') {
             <?php foreach ($juegos as $juego): ?>
                 <div class="game-item">
                     <a href="detalle_juego.php?id=<?= $juego->id ?>">
-                        <img src="../resources/<?= htmlspecialchars($juego->imagen) ?>" 
+                        <img src="../../resources/<?= htmlspecialchars($juego->imagen) ?>" 
                              alt="<?= htmlspecialchars($juego->nombre) ?>">
                     </a>
                     <h5 style="text-align:center; color:white; margin-top:10px;">

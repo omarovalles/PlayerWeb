@@ -1,6 +1,9 @@
 <?php
 
 require_once '../library/motor.php';
+
+
+// VERIFICACION DE ROL 
 session_start();
 
 if (!isset($_SESSION['usuario_id'])) {
@@ -31,10 +34,10 @@ $rol = $resultado[0]->rol ?? 'U';
     <nav class="navigation">
         <ul>
             <li><a href="website.php">Inicio</a></li>
-            <li><a href="games.php">Juegos</a></li>
-            <li><a href="animes.php">Animes</a></li>
-            <li><a href="about.php">Sobre mí</a></li>
-            <li><a href="contactame.php">Contacto</a></li>
+            <li><a href="games/games.php">Juegos</a></li>
+            <li><a href="anime/animes.php">Animes</a></li>
+            <li><a href="contacts/about.php">Sobre mí</a></li>
+            <li><a href="contacts/contactame.php">Contacto</a></li>
              <?php if ($usuarioid): ?>
                         <li><a href="../web/perfil.php?id=<?=$usuarioid?>">Perfil</a></li>
                         <li><a href="../controllers/logout.php">Salir</a></li>
